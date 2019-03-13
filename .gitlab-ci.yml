@@ -43,7 +43,7 @@ image: alpine:latest
 
 variables:
   # KUBE_INGRESS_BASE_DOMAIN is the application deployment domain and should be set as a variable at the group or project level.
-  KUBE_INGRESS_BASE_DOMAIN: spring-test.doralsolutions.com
+  KUBE_INGRESS_BASE_DOMAIN: app.doralsolutions.com
 
   POSTGRES_USER: user
   POSTGRES_PASSWORD: testing-password
