@@ -61,6 +61,7 @@ variables:
   #SETTINGS BY RENE
   #TEST_DISABLED: "true"
   LICENSE_MANAGEMENT_DISABLED: "true"
+  STAGING_ENABLED: "true"
 
 
 stages:
