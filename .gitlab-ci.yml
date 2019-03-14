@@ -43,7 +43,7 @@ image: alpine:latest
 
 variables:
   # KUBE_INGRESS_BASE_DOMAIN is the application deployment domain and should be set as a variable at the group or project level.
-  # KUBE_INGRESS_BASE_DOMAIN: domain.example.com
+  KUBE_INGRESS_BASE_DOMAIN: app.doralsolutions.com
 
   POSTGRES_USER: user
   POSTGRES_PASSWORD: testing-password
@@ -82,23 +82,6 @@ build:
     - /build/build.sh
   only:
     - branches
-
-test:
-  services:
-    - postgres:latest
-  variables:
-    POSTGRES_DB: test
-  stage: test
-  image: gliderlabs/herokuish:latest
-  script:
-    - setup_test_db
-    - cp -R . /tmp/app
-    - /bin/herokuish buildpack test
-  only:
-    - branches
-  except:
-    variables:
-      - $TEST_DISABLED
 
 code_quality:
   stage: test
