@@ -57,6 +57,11 @@ variables:
   DOCKER_DRIVER: overlay2
 
   ROLLOUT_RESOURCE_TYPE: deployment
+  
+  #SETTINGS BY RENE
+  TEST_DISABLED: "true"
+  LICENSE_MANAGEMENT_DISABLED: "true"
+
 
 stages:
   - build
@@ -82,6 +87,23 @@ build:
     - /build/build.sh
   only:
     - branches
+
+test:
+  services:
+    - postgres:latest
+  variables:
+    POSTGRES_DB: test
+  stage: test
+  image: gliderlabs/herokuish:latest
+  script:
+    - setup_test_db
+    - cp -R . /tmp/app
+    - /bin/herokuish buildpack test
+  only:
+    - branches
+  except:
+    variables:
+      - $TEST_DISABLED
 
 code_quality:
   stage: test
