@@ -13,6 +13,12 @@ public class UserController {
 	@Autowired
 	private UserDaoService service;
 	
+	@GetMapping(path="/")
+	public String home () {
+		return "Hello Home!";
+	}
+	
+	
 	@GetMapping(path="/hello")
 	public String helloWorld () {
 		return "Hello World!";
