@@ -59,7 +59,7 @@ variables:
   ROLLOUT_RESOURCE_TYPE: deployment
   
   #SETTINGS BY RENE
-  TEST_DISABLED: "true"
+  #TEST_DISABLED: "true"
   LICENSE_MANAGEMENT_DISABLED: "true"
 
 
