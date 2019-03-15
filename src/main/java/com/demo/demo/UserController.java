@@ -15,7 +15,7 @@ public class UserController {
 	
 	@GetMapping(path="/")
 	public String home () {
-		return "Hello Home!";
+		return "Rene's first Rest API using Spring boot!";
 	}
 	
 	
