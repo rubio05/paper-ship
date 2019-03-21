@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-COPY . /targets/*.jar app.jar
+COPY /target/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"] 
 
 #/home/vsts/work/1/a
