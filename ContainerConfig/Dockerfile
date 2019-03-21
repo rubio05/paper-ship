@@ -1,5 +1,5 @@
 FROM openjdk:8-jdk-alpine
-VOLUME /tmp
+VOLUME /tmppppppppp
 #COPY . /target/*.jar app.jar
 RUN echo ****** THIS IS THE DIRECTORY ****** &(ls tmp/)
 ADD . /*.jar app.jar
