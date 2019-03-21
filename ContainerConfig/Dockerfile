@@ -5,7 +5,7 @@ VOLUME /tmp
 #RUN cd . /home/vsts/work/1/a/target/
 #RUN echo ****** THIS IS THE DIRECTORY ****** &(ls)
 #COPY demo-0.0.1-SNAPSHOT.jar app.jar
-COPY /target/*.jar app.jar
+COPY target/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"] 
 
 #/home/vsts/work/1/a
