@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: demoapp
-        image: rrcruz2/repository:71
+        image: rrcruz2/repository:72
         ports:
         - containerPort: 8010
         livenessProbe:
